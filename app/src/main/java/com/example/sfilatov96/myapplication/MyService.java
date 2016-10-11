@@ -4,6 +4,7 @@ import android.app.IntentService;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -28,7 +29,9 @@ public class MyService extends IntentService {
             Weather weather = WeatherUtils.getInstance().loadWeather(city);
             weatherStorage.saveWeather(city, weather);
             Intent newIntent = new Intent(ACTION);
-            sendBroadcast(newIntent);
+            LocalBroadcastManager.getInstance(this).
+                    sendBroadcast(newIntent);
+
         } catch (IOException e) {
             Log.d("ERROR","error");
         }

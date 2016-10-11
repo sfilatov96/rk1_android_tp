@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.example.sfilatov96.myapplication.MainActivity">
+    tools:context=".SecondActivity">
 
 
     <android.support.v4.widget.Space

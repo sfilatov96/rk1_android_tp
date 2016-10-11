@@ -18,14 +18,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivty"
+            android:name=".SecondActivity"
             android:label="Weather" />
 
         <service
             android:name=".MyService"
-            android:enabled="true"
-            android:exported="true" />
-
+            android:enabled="true" />
 
     </application>
 

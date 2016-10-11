@@ -1,2 +1,2 @@
-CHANGED,/home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/sfilatov96/myapplication/SecondActivty$override.class
 CHANGED,/home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/sfilatov96/myapplication/MyService$override.class

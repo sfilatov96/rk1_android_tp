@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,35 +30,43 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_activty);
         weatherStorage = WeatherStorage.getInstance(MainActivity.this);
-        fone = (Button) findViewById(R.id.btn_fone);
-        no_fone = (Button) findViewById(R.id.btn_not_fone);
-        city_button = (Button) findViewById(R.id.btn_city);
-        status = (TextView) findViewById(R.id.weather_string);
-        city_button.setText(weatherStorage.getCurrentCity().name());
-        city_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        fone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MyService.class);
-                WeatherUtils.getInstance().schedule(MainActivity.this, intent);
-                Log.d(TAG,"START");
-            }
-        });
-        no_fone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MyService.class);
-                WeatherUtils.getInstance().unschedule(MainActivity.this, intent);
-                Log.d(TAG, "STOP");
-            }
-        });
+        setContentView(R.layout.activity_second_activty);
+        if (weatherStorage.getCurrentCity() != null) {
+
+            weatherStorage = WeatherStorage.getInstance(MainActivity.this);
+            fone = (Button) findViewById(R.id.btn_fone);
+            no_fone = (Button) findViewById(R.id.btn_not_fone);
+            city_button = (Button) findViewById(R.id.btn_city);
+            status = (TextView) findViewById(R.id.weather_string);
+            city_button.setText(weatherStorage.getCurrentCity().name());
+            city_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    startActivity(intent);
+                }
+            });
+            fone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, MyService.class);
+                    WeatherUtils.getInstance().schedule(MainActivity.this, intent);
+                    Log.d(TAG, "START");
+                }
+            });
+            no_fone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, MyService.class);
+                    WeatherUtils.getInstance().unschedule(MainActivity.this, intent);
+                    Log.d(TAG, "STOP");
+                }
+            });
+        } else {
+            Intent intent = new Intent(this, SecondActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -72,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
                 getCurrWeather();
             }
         };
-        registerReceiver(broadcastReceiver, filter);
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, filter);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(broadcastReceiver);
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
     }
 
     private void getCurrWeather(){

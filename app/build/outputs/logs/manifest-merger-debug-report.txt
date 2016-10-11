@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:2:1-32:12
+ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:3:5-51
 		INJECTED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/And
 	android:name
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:6:5-30:19
+ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:6:5-28:19
 MERGED from [com.android.support:appcompat-v7:24.2.0] /home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.2.0] /home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:24.2.0] /home/sfilatov96/AndroidStudioProjects/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/AndroidManifest.xml:25:5-20
@@ -67,18 +67,16 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:17:27-74
-activity#com.example.sfilatov96.myapplication.SecondActivty
+activity#com.example.sfilatov96.myapplication.SecondActivity
 ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:20:9-22:39
 	android:label
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:21:13-42
+		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:21:13-43
 service#com.example.sfilatov96.myapplication.MyService
-ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:24:9-27:39
+ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:24:9-26:38
 	android:enabled
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:26:13-35
-	android:exported
-		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:27:13-36
 	android:name
 		ADDED from /home/sfilatov96/AndroidStudioProjects/MyApplication/app/src/main/AndroidManifest.xml:25:13-38
 uses-sdk
